@@ -6,7 +6,7 @@ Días festivos no laborables en Colombia. Calculados con base en la ley 51 de 19
 
 **Última vez modificado**: 2019-06-29   
 **Desde**: 2019-06-29   
-**Version**: 0.1    
+**Version**: 0.0.2    
 **Autor:** Javier Mejía <_jmjaviermejiaest@gmail.com_>
 
 ### Instalación
@@ -18,7 +18,7 @@ $ pip install holidays_co
 import holidays_co
 holidays = holidays_co.get_colombia_holidays_by_year(2019)
 ```
-or
+o
 ```python
 from holidays_co import get_colombia_holidays_by_year
 holidays = get_colombia_holidays_by_year(2019)
