@@ -1,0 +1,11 @@
+# Compiled python modules.
+*.pyc
+
+# VS Code configuration files
+/.vscode/
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
