@@ -9,12 +9,21 @@ Días festivos no laborables en Colombia. Calculados con base en la ley 51 de 19
 **Version**: 0.1    
 **Autor:** Javier Mejía <_jmjaviermejiaest@gmail.com_>
 
-**Ejemplo**
+### Instalación
+```shell
+$ pip install holidays_co
+```
+### Ejemplo
 ```python
 import holidays_co
 holidays = holidays_co.get_colombia_holidays_by_year(2019)
 ```
-
+or
+```python
+from holidays_co import get_colombia_holidays_by_year
+holidays = get_colombia_holidays_by_year(2019)
+```
+---
 #### Métodos disponibles
 - **get_colombia_holidays_by_year(year)**: Devuelve la lista de festivos no laborables en Colombia para un año
 
