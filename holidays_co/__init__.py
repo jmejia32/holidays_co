@@ -87,5 +87,7 @@ def get_colombia_holidays_by_year(year):
 def is_holiday_date(d):
     if not isinstance(d, date):
         raise TypeError("Debe proporcionar un objeto tipo date")
+    if isinstance(d, datetime):
+        d = d.date()
     holiday_list = set([holiday.date for holiday in get_colombia_holidays_by_year(d.year)])
     return d in holiday_list
