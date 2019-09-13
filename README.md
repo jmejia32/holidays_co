@@ -5,8 +5,8 @@ Portado a módulo de Python desde [colombia-holidays](https://github.com/nequibc
 Días festivos no laborables en Colombia. Calculados con base en la ley 51 de 1983
 
 **Última vez modificado**: 2019-06-30   
-**Desde**: 2019-06-29   
-**Version**: 0.0.2    
+**Desde**: 2019-09-15   
+**Version**: 1.0.0    
 **Autor:** Javier Mejía <_jmjaviermejiaest@gmail.com_>
 
 ### Instalación
