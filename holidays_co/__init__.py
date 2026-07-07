@@ -31,6 +31,8 @@ HOLIDAYS: tuple[HolidayStock] = (
     HolidayStock(month=3, day=19, move_to=calendar.MONDAY, celebration="Día de San José"),
     HolidayStock(month=5, day=1, move_to=None, celebration="Día del Trabajo"),
     HolidayStock(month=6, day=29, move_to=calendar.MONDAY, celebration="San Pedro y San Pablo"),
+    # http://www.secretariasenado.gov.co/senado/basedoc/ley_2578_2026.html
+    HolidayStock(month=7, day=9, move_to=calendar.MONDAY, celebration="Señora del Rosario de Chiquinquirá"),
     HolidayStock(month=7, day=20, move_to=None, celebration="Día de la Independencia"),
     HolidayStock(month=8, day=7, move_to=None, celebration="Batalla de Boyacá"),
     HolidayStock(month=8, day=15, move_to=calendar.MONDAY, celebration="La Asunción de la Virgen"),
