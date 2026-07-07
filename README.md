@@ -4,9 +4,9 @@ Portado a módulo de Python desde [colombia-holidays](https://github.com/nequibc
 
 Días festivos no laborables en Colombia. Calculados con base en la ley 51 de 1983
 
-**Última vez modificado**: 2019-09-13   
+**Última vez modificado**: 2026-07-07   
 **Desde**: 2019-06-29   
-**Version**: 1.0.0    
+**Version**: 1.1.0    
 **Autor:** Javier Mejía <_jmjaviermejiaest@gmail.com_>
 
 ### Instalación
@@ -28,7 +28,7 @@ holidays = get_colombia_holidays_by_year(2019)
 - **get_colombia_holidays_by_year(year)**: Devuelve la lista de festivos no laborables en Colombia para un año
 
     _Input_: `type(int)`    
-    _Output_: `list(namedtuple("Holiday", ["date", "celebration"]))`
+    _Output_: `list(Holiday(date=datetime.date, celebration=str))`
 - **is_holiday_date(date)**: Returna `True`, si la fecha ingresada corresponde a un día festivo, `False` en caso contrario.     
     _Input_: `type(date)`   
     _Output_: `type(bool)`
