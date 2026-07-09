@@ -3,6 +3,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date, timedelta, datetime
 from functools import reduce
+import sys
 
 @dataclass
 class HolidayStock:
@@ -11,6 +12,13 @@ class HolidayStock:
     month: int = None
     day_delta: int = None
     move_to: int = None
+
+    def __post_init__(self):
+        if sys.version_info < (3, 12):
+            return
+        if not isinstance(self.move_to, calendar.Day):
+            return
+        self.move_to = self.move_to.value
 
 @dataclass
 class Holiday:
@@ -75,8 +83,8 @@ def _holidays_by_month(year: int) -> dict[int, list[Holiday]]:
     result = defaultdict(list)
     for holiday in HOLIDAYS:
         holiday_date = date(year, holiday.month, holiday.day)
-        if holiday.move_to is not None and holiday_date.weekday() != holiday.move_to.value:
-            holiday_date = _next_weekday(holiday_date, holiday.move_to.value)
+        if holiday.move_to is not None and holiday_date.weekday() != holiday.move_to:
+            holiday_date = _next_weekday(holiday_date, holiday.move_to)
 
         key = holiday_date.month
         result[key].append(
@@ -92,7 +100,7 @@ def _holidays_by_month(year: int) -> dict[int, list[Holiday]]:
     for holiday in EASTER_WEEK_HOLIDAYS:
         holiday_date = sunday_date + timedelta(days=holiday.day_delta)
         if holiday.move_to is not None and holiday_date.weekday() != holiday.move_to:
-            holiday_date = _next_weekday(holiday_date, holiday.move_to.value)
+            holiday_date = _next_weekday(holiday_date, holiday.move_to)
 
         key = holiday_date.month
         result[key].append(
