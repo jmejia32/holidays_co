@@ -10,7 +10,7 @@ class HolidayStock:
     day: int = None
     month: int = None
     day_delta: int = None
-    move_to: calendar.Day = None
+    move_to: int = None
 
 @dataclass
 class Holiday:
