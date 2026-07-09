@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="holidays_co",
-    version="1.1.1",
+    version="1.1.2",
     author="Javier Mejía",
     author_email="jmjaviermejiaest@gmail.com",
     description="Módulo de utilidades para festivos en Colombia",
